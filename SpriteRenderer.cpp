@@ -38,3 +38,14 @@ int SpriteRenderer::GetCurrentFrame() const
 {
 	return m_currentFrame;
 }
+
+ObjectId SpriteRenderer::GetSpriteId() const
+{
+	return m_spriteObjectId;
+}
+
+void SpriteRenderer::SetSpriteId(ObjectId spriteObjectId)
+{
+	m_spriteObjectId = spriteObjectId;
+	m_currentFrame = 0;
+}

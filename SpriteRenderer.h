@@ -9,6 +9,9 @@ class SpriteRenderer : public Component
 	ObjectId m_spriteObjectId;
 	int m_currentFrame;
 public:
+	ObjectId GetSpriteId() const;
+	void SetSpriteId(ObjectId spriteObjectId);
+
 	int GetCurrentFrame() const;
 	void SetCurrentFrame(int frame);
 	void Render(struct SDL_Renderer* renderer) const;

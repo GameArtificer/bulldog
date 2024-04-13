@@ -28,11 +28,13 @@ public:
 	Sprite();
 	~Sprite();
 
-	void Initialize(
+	void LoadPNG(
 		const char* pngFilename,				// PNG file containing the sprite sheet
-		XY frameSize,							// frame size
-		const std::vector<XY>& framePositions	// frame positions
 	);
+
+	void SetFrameSize(XY frameSize);
+	void SetFrame(
+		const std::vector<XY>& framePositions	// frame positions)
 
 	void RenderFrame(int frameIndex, SDL_Renderer* renderTarget, XY xy) const;
 };

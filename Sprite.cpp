@@ -6,12 +6,25 @@
 #include <SDL3_image/SDL_image.h>
 
 Sprite::Sprite()
-		: m_texture(nullptr)
+	: m_texture(nullptr)
+	, m_pixelFormat(0)
+	, m_framePositions()
+	, m_sheetSize(0,0)
+	, m_frameSize(0,0)
+	, m_frameRects()
 {
 }
 
+Sprite::~Sprite()
+{
+	if (m_texture)
+	{
+		SDL_DestroyTexture(m_texture);
+	}
+}
 
-void Sprite::Initialize(
+
+void Sprite::LoadPNG(
 	const char* pngFilename,				// PNG file containing the sprite sheet
 	XY frameSize,							// frame size
 	const std::vector<XY>& framePositions	// frame positions
@@ -24,9 +37,11 @@ void Sprite::Initialize(
 		m_texture,
 		&m_pixelFormat,
 		&access,
-		&m_sheetSize.x, 
+		&m_sheetSize.x,
 		&m_sheetSize.y);
+}
 
+void Sprite::m_frameSize(X)
 	m_frameSize = frameSize;
 	for (auto xy : framePositions)
 	{
@@ -63,13 +78,4 @@ void Sprite::RenderFrame(int frameIndex, SDL_Renderer* renderTarget, XY drawPosi
 		m_texture, 
 		&m_frameRects[frameIndex], 
 		&drawRect);
-}
-
-
-Sprite::~Sprite()
-{
-	if (m_texture)
-	{
-		SDL_DestroyTexture(m_texture);
-	}
 }

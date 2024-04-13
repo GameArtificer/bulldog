@@ -46,16 +46,10 @@
     <ClCompile Include="Engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ObjectBehavior.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="InputManager.cpp">
       <Filter>Source Files\Input</Filter>
     </ClCompile>
     <ClCompile Include="Sprite.cpp">
-      <Filter>Source Files\Sprite</Filter>
-    </ClCompile>
-    <ClCompile Include="SpriteAnimator.cpp">
       <Filter>Source Files\Sprite</Filter>
     </ClCompile>
     <ClCompile Include="SpriteRenderer.cpp">
@@ -78,32 +72,11 @@
     <ClInclude Include="Singleton.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="Id.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="Engine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Constants.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="xy.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="World.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="UserInterface.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CellWorld.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjectBehavior.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SpriteAnimator.h">
-      <Filter>Header Files\Sprite</Filter>
     </ClInclude>
     <ClInclude Include="SpriteRenderer.h">
       <Filter>Header Files\Sprite</Filter>
